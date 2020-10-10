@@ -691,6 +691,7 @@ img {
     background-color: var(--background-light-color);
     border-radius: 4px;
     border:none;
+    cursor: pointer;
     transition: all var(--transition-timing);
 }
 
