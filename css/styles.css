@@ -13,6 +13,9 @@
     --card-border-color: solid #EEEEEE;
     --hero-bg: #C4C4C4;
     --icon-color: #AFB1B8;
+    --services-bg: rgba(47, 48, 58, 0.8);
+    --backdrop-color: rgba(0, 0, 0, 0.2);
+    --border-radius: rgba(0, 0, 0, 0.1);
 
     --transition-timing: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -74,6 +77,53 @@ img {
     letter-spacing: 0.03em;
     color: var(--title-dark-color);
 }
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--backdrop-color);
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 581px;
+    background-color: var(--title-light-color);
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; 
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--border-radius);
+    background-color: var(--title-light-color);
+}
+
+.close-button-svg {
+    width: 11px;
+    height: 11px;
+}
+
 /*  ============ END COMPONENTS ============ */
 
 /*  ============ HEADER ============ */
@@ -437,7 +487,7 @@ img {
     justify-content: center;
     width: 370px;
     height: 70px;
-    background: rgba(47, 48, 58, 0.8);
+    background: var(--services-bg);
 }
 
 .service-list-overlay-title {
@@ -511,8 +561,7 @@ img {
     width:44px;
     height:44px;
     border-radius: 50%;
-    background-color: var(--title-light-color);
-    transition: var(--transition-timing);
+    transition: background-color var(--transition-timing);
 }
 
 .social-list svg {
@@ -556,7 +605,7 @@ img {
     height: 90px;
     border: 1px solid var(--icon-color);
     border-radius: 4px;
-    transition: var(--transition-timing);
+    transition: border-color var(--transition-timing);
 }
 
 .clients-list-svg {
@@ -673,7 +722,7 @@ img {
 
 .projects-list-link {
     display: block;
-    transition: var(--transition-timing);
+    transition: box-shadow var(--transition-timing);
 }
 
 
@@ -716,13 +765,13 @@ img {
     height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
     font-size: 18px;
-    transition: var(--transition-timing);
     font-weight: 400px;
     font-size: 18px;
     line-height: 1.556;
     letter-spacing: 0.03em;
     color: var(--title-light-color);
     transform: translateY(100%);
+    transition: transform var(--transition-timing);
  }
 
 .projects-list-link:hover .projects-overlay,
