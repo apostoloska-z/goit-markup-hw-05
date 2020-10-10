@@ -13,6 +13,8 @@
     --card-border-color: solid #EEEEEE;
     --hero-bg: #C4C4C4;
     --icon-color: #AFB1B8;
+
+    --transition-timing: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 *,
@@ -115,8 +117,7 @@ img {
     line-height: 1.143;
     letter-spacing: 0.02em;
     color: var(--title-dark-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--transition-timing);
 }
 
 .navigation-list-link:hover,
@@ -156,8 +157,7 @@ img {
     line-height: 1.143;
     letter-spacing: 0.02em;
     color: var(--description-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--transition-timing);
 }
 
 .contact-list a {
@@ -173,8 +173,7 @@ img {
 .contact-list-svg {
     margin-right: 10px;
     fill: var(--description-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--transition-timing);
 }
 
 .envelope {
@@ -244,8 +243,7 @@ img {
     line-height: 1.714;
     letter-spacing: 0.03em;
     color: var(--title-light-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--transition-timing);
 }
 
 .address-link {
@@ -254,8 +252,7 @@ img {
     line-height: 1.714;
     letter-spacing: 0.03em;
     color: var(--semitransparent-address-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--transition-timing);
 }
 
 .address-main:hover,
@@ -514,16 +511,15 @@ img {
     width:44px;
     height:44px;
     border-radius: 50%;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: var(--title-light-color);
+    transition: var(--transition-timing);
 }
 
 .social-list svg {
     width: 20px;
     height: 20px;
     fill: var(--icon-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--transition-timing);
 }
 
 .social-list-link:hover,
@@ -560,14 +556,12 @@ img {
     height: 90px;
     border: 1px solid var(--icon-color);
     border-radius: 4px;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--transition-timing);
 }
 
 .clients-list-svg {
     fill: var(--icon-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--transition-timing);
 }
 
 .logo-1 {
@@ -648,8 +642,7 @@ img {
     background-color: var(--background-light-color);
     border-radius: 4px;
     border:none;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all var(--transition-timing);
 }
 
 .projects-filter-list-button:hover,
@@ -680,14 +673,9 @@ img {
 
 .projects-list-link {
     display: block;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--transition-timing);
 }
 
-.projects-list-link:hover,
-.projects-list-link:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 
 .projects-card-content {
     padding: 20px 24px;
@@ -728,8 +716,7 @@ img {
     height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
     font-size: 18px;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--transition-timing);
     font-weight: 400px;
     font-size: 18px;
     line-height: 1.556;
@@ -738,17 +725,20 @@ img {
     transform: translateY(100%);
  }
 
-.projects-list-link:hover .projects-overlay {
+.projects-list-link:hover .projects-overlay,
+.projects-list-link:focus .projects-overlay {
     transform: translateY(0); 
+}
+
+.projects-list-link:hover,
+.projects-list-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /*  ============ END PROJECTS ============ */
 
 /*-------END PORTFOLIO PAGE-------*/
 
-transition property
-
-переменная тайминг фанкшн
 
 
 
